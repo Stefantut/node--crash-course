@@ -2,16 +2,25 @@
 // will create a server
 
 const http = require("http");
+const path = require("path");
+const fs = require("fs");
 
 const server = http.createServer((req, res) => {
   //   res.write("helllo user");
   //close the response
   //   res.end();
   if (req.url === "/") {
+    fs.readFile(path.join(__dirname, "index.html"), (err, data) => {
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    });
     //add in head - metadata
-    res.writeHead(200, { "Content-Type": "text/html" });
-    res.write("<h1>Welcome to the homepage</h1>");
-    res.end();
+    // res.writeHead(200, { "Content-Type": "text/html" });
+    // res.write("<h1>Welcome to the homepage</h1>");
+    // res.write("<h1>Welcome again</h1>");
+    // res.write("<p>Hi user</p>");
+    // res.end();
   }
   if (req.url === "/user") {
     res.write("welcome user john");
