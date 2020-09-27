@@ -2,8 +2,8 @@
 // const sayName = require("./sayName");
 
 // sayName();
-const getUserInfo = require("./sayName");
 
-getUserInfo.sayName();
+// imports frunction from an object of functions
+// const getUserInfo = require("./sayName");
 
-console.log(__filename);
+// getUserInfo.sayName();
