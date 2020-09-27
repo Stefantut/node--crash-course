@@ -1,4 +1,7 @@
 // imports function
-const sayName = require("./sayName");
+// const sayName = require("./sayName");
 
-sayName();
+// sayName();
+const getUserInfo = require("./sayName");
+
+getUserInfo.sayName();
