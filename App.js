@@ -1,1 +1,4 @@
-console.log(5 + 5);
+// imports function
+const sayName = require("./sayName");
+
+sayName();
