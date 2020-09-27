@@ -1,4 +1,4 @@
-// modules that are pre-built in node js
+// pre-built module in node js
 const path = require("path");
 
 // appends app.js
